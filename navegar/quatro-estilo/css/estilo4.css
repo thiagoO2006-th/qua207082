@@ -1,5 +1,41 @@
 body{
     background-color: black;   
-    color: #84c754;;
+    color: #84c754;
+    font: 100% "courier New";
+}
 
+#top{
+    padding: 15px
+}
+
+#top h1, #top p{
+    margin: 0;
+}
+
+li:hover{
+    color:white;
+    cursor: pointer;
+}
+
+#menubar{
+    margin: 15px;
+    background-color: MediumSeaGreen;
+    opacity background: 0.3;
+}
+
+#main{
+    margin: 15px;
+    background-color: blue
+}
+
+.wrrapper{
+    position: relative;
+}
+
+#siderbar{
+    background-color: SlateBlue;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 320px;
 }
