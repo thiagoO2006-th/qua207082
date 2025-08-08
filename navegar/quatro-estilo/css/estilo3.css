@@ -1,18 +1,22 @@
 body{
-    background-color: black;   
-    color: #84c754;
-    font: 100% "courier New";
+    background-color:white;
+    font: 100% "verdana";
     line-height: 26px;
+    border: 20px solid white;
+
 }
 
 #top{
-    
+    color: #84c754;
     padding: 15px
+    
 }
 
-#top h1, #top p{
+#top p{
+    color: black;
     margin: 0;
 }
+
 
 li:hover{
     color:white;
@@ -70,7 +74,6 @@ a:houver{
 }
 
 li:nth-child(4){
-    color: white;
     font-weight: bold;
 
 }
@@ -83,3 +86,4 @@ li:nth-child(4){
  }
 
 }
+
