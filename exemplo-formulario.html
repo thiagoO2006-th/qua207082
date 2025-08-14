@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo Formulário</title>
+    <style>
+        label, input{
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <h1>Exemplo Formulario</h1>
-    <form action="">
-        <label for="">Nome:</label>
-        <input type="text">
-        <label for="">Email:</label>
-        <input type="email">
-        <label for="">Senha:</label>
-        <input type="password">
+    <form action="./nada.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
 </body>
 </html>
