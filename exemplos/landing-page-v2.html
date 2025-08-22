@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,8 +16,10 @@
         header {
             display: flex;
             justify-content: space-between;
-            border: 1px solid black;
             align-items: center;
+            background-color: gray;
+            color: white;
+            padding: 0px 2px;
         }
 
         nav a {
@@ -28,127 +30,291 @@
         }
 
         #principal {
-            background-color: gray;
-            text-align: center;
+            display: flex;
+
+        }
+
+        #principal div {
+            width: 50%;
+            margin: 30px;
+            text-align: left;
         }
 
         #principal h2 {
-            padding-top: 45px;
+            font-size: 150%
         }
 
         #principal p {
-
-            padding-top: 20px;
-            max-width: 400px;
-            margin: auto;
-
+            margin-top: 20px;
+            font-size: 90%;
         }
 
         #principal button {
-            padding: 10px 20px;
-            margin: 40px auto;
-            cursor: pointer;
+            padding: 20px;
+            margin: 30px 0px;
+            width: 300px;
+            background-color: gray;
+            border: 2px solid black;
+            font-weight: bold;
+        }
+
+        #principal iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        #carrossel {
+            justify-content: center;
+            display: flex;
+        }
+
+        #container {
+            width: 880px;
+            overflow: hidden;
+        }
+
+        #carrosel-container {
+            width: 100%;
+            display: flex;
+            transition: transform 0.9s ease-in-out;
 
         }
 
-        #lista {
+        .img {
+            height: 130px;
+            min-width: 200px;
+            background-color: gray;
+            margin: 10px;
+        }
+
+        #carrosel div {
+            height: 130px;
+            width: 200px;
+            background-color: gray;
+            margin: 10px;
+        }
+
+        #noticias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #bt-left,
+        #bt-rigth {
+            font-size: 300%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .noticia {
+            width: 270px;
+            padding: 30px;
+        }
+
+        .noticia div {
+            border: 2px solid black;
+            border-radius: 100%;
+            float: left;
+            width: 30px;
+            height: 30px;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .noticia h3 {
+            font-size: xx-large;
+        }
+
+        .noticia p {
+            margin-top: 5px;
+        }
+
+        #depoimentos {
+            display: flex;
 
         }
 
-        #lista .caixa {
+        .depoimento {
+            padding: 30px;
+        }
+
+        .foto {
             background-color: gray;
-            width: 200px;
-            margin: 20px;
-            padding: 20px;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin-right: 15px;
         }
 
-        .caixa h3 {
-            padding-bottom: 10px;
-        }
-        #depoimentos{
+        footer {
             background-color: gray;
             text-align: center;
             padding: 20px;
+            color: white;
         }
 
-        #depoimentos *{
-            padding: 10px;
+        body {
+            width: 1000px;
+            margin: auto;
+            border: 2px solid black;
+            background-color: white;
         }
-    footer{
-        background-color: black;
-        color: white;
-        text-align: end;
-        
-    }
-    body{
-        max-width: 1000px;
-        margin: auto;
-    }
 
-    #conteiner{
-        display: flex;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: space-between;
+        html {
+            background-color: #dedede;
+        }
 
-    }
+        hr {
+            border: 1px solid #c2c2c2;
+            width: 80%;
+            margin: auto;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
 <body>
-
-    <div id="conteiner">
-    <div id="grupo01">
     <header>
-        <h1>Minha Marca</h1>
+        <h1>logo</h1>
         <nav>
-            <a href="#">A</a>
-            <a href="#">B</a>
-            <a href="#">C</a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+
+
         </nav>
     </header>
     <section id="principal">
-        <h2>Transforma suas ideias em</h2>
-        <p>Nosso produto ajuda você a alcançar seus objetivos
-            de forma, simples, rapida e eficiente.
-        </p>
-        <button>Quero Comerçar Agora</button>
-    </section>
-    <section id="lista">
-        <div class="caixa">
-            <h3>rapido</h3>
-            <p>Obtenha resultados em tempo recorde com nossa solução </p>
-        </div>
-        <div class="caixa">
-            <h3>rapido</h3>
-            <p>Obtenha resultados em tempo recorde com nossa solução </p>
-        </div>
-        <div class="caixa">
-            <h3>rapido</h3>
-            <p>Obtenha resultados em tempo recorde com nossa solução </p>
-        </div>
-    </section>
+        <div>
+            <h2>What is Lorem Ipsum?</h2>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting. <br>
 
-    </div>
-    <div id="grupo02">
-        
+            </p>
+            <button>CTA Button </button>
+
+        </div>
+        <div>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/tNobiwuAaAg?si=7xtHolPh3XanhUUA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <hr>
+    <section id="carrossel">
+        <div id="bt-left" onclick="carrossel(-1)">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div id="container">
+            <div id="carrosel-container">
+                <div class="img">1</div>
+                <div class="img">2</div>
+                <div class="img">3</div>
+                <div class="img">4</div>
+                <div class="img">5</div>
+                <div class="img">6</div>
+            </div>
+        </div>
+        <div id="bt-rigth" onclick="carrossel(1)">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+    </section>
+    <hr>
+    <section id="noticias">
+        <div class="noticia">
+            <div>1</div>
+            <h3>lorem Ipsum</h3>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. </p>
+        </div>
+
+        <div class="noticia">
+            <div>2</div>
+            <h3>lorem Ipsum</h3>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. </p>
+        </div>
+
+        <div class="noticia">
+            <div>3</div>
+            <h3>lorem Ipsum</h3>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book.</p>
+        </div>
+
+        <div class="noticia">
+            <div>4</div>
+            <h3>lorem Ipsum</h3>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book.</p>
+        </div>
+
+        <div class="noticia">
+            <div>5</div>
+            <h3>lorem Ipsum</h3>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book.</p>
+        </div>
+
+        <div class="noticia">
+            <div>6</div>
+            <h3>lorem Ipsum</h3>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book.</p>
+        </div>
+    </section>
+    <hr>
     <section id="depoimentos">
-        <h2>O que nossos clientes dizem</h2>
-        <p>"Mudou completamente minha forma de trabalhar. Recomendo!"</p>
-        <p>"excelente atendimento e resultados incriveis!"</p>
+        <div class="depoimento">
+            <div class="foto"></div>
+            <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s</p>
+        </div>
+        <div class="depoimento">
+            <div class="foto"></div>
+            <p>Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s</p>
+        </div>
     </section>
+    <hr>
     <footer>
-        &copy; 2025 Minha Marca. Todos os direitos reservados.
+        Alguma coisa escrita aqui para voce ler.
     </footer>
+    <script>
+        const imgs = document.getElementById("carrosel-container");
+        const img = document.querySelectorAll("#carrosel-container div");
+        let idx = 0;
+        function carrossel(i) {
+            idx += i;
+            if (idx < 0) idx = 0;
+            if (idx >= img.length -4) idx = img.length - 4;
+            imgs.style.transform = `translateX(${-idx * 220}px)`;
 
-    </div>
-    </div>
+        }
+    </script>
 </body>
 
 </html>

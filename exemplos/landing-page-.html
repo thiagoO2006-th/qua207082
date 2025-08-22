@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>escolinha de basquete</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            border: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid black;
+            align-items: center;
+            background-color: rgb(0, 0, 128,0.4);
+        }
+
+        nav a {
+            background-color: rgb(0, 191, 255,0.6   );
+            color: white;
+            padding: 10px 15px;
+            margin: 0px 2px;
+        }
+
+        #principal {
+            background-color:  rgb(255, 102, 0, 0.7);
+            text-align: center;
+            color: white;
+           
+        }
+        #principal div{
+            display: inline-block;
+            width: 45%;
+            vertical-align: top;
+        }
+        #principal iframe{
+            width: 100%;
+            border: 2px solid rgb(255, 255, 255, 0.7);
+            border-radius: 10px;
+            margin: 30px 0px;
+        }
+
+        #principal h2 {
+            padding-top: 45px;
+        }
+
+        #principal p {
+
+            padding-top: 20px;
+            max-width: 400px;
+            margin: auto;
+
+        }
+
+        #principal button {
+            padding: 14px 30px;
+            margin: 40px auto;
+            cursor: pointer;
+            border-radius: 7px;
+            background-color: #000080;
+            color: white;
+
+        }
+
+        #lista {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+
+        }
+
+        #lista .caixa {
+            background-color: rgb(72, 202, 228, 0.7 );
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .caixa h3 {
+            padding-bottom: 10px;
+        }
+        #depoimentos{
+            background-color: DarkOrange;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #depoimentos *{
+            padding: 10px;
+        }
+    footer{
+        background-color: black;
+        color: white;
+        text-align: end;
+        
+    }
+    body{
+        max-width: 1000px;
+        margin: auto;
+         font-family: "Times New Roman", Times, serif;
+         border: 2px solid black;
+    }
+
+    #conteiner{
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    html{
+        background-color: #FDF5E6;
+
+    }
+    #principal button:hover{
+        background-color: rgb(0, 0, 128,0.7);
+        box-shadow: 3px 3px 5px black;
+        transform: scale(1.0);
+        transition: all 0.2s ease-in-out;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="conteiner">
+    <div id="grupo01">
+    <header>
+        <h1>Next Dunk Academy</h1>
+        <nav>
+            <a href="#"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="#"><i class="fa-solid fa-basketball"></i></a>
+            <a href="#"><i class="fa-brands fa-contao"></i></a>
+        </nav>
+    </header>
+    <section id="principal">
+        <div>
+        <h2>Descubra o seu talento no Basquete</h2>
+        <p>Oferecemos treinos divertidos e educativos para crianças e adolescentes, com foco em desenvolvimento técnico, disciplina e espírito de equipe.</p>
+        <button>matricule-se</button>
+        </div>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zHCP5wNF-wQ?si=ILE3PKow_6fr4bdm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section id="lista">
+        <div class="caixa">
+            <h3>🏀 Para todas as idades</h3>
+            <p>Equipes para todas as idades</p>
+        </div>
+        <div class="caixa">
+            <h3>💪 Desenvolvimento</h3>
+            <p>Livros aprimoramentos fisicos e mentas</p>
+        </div>
+        <div class="caixa">
+            <h3>trabbalho emn equipe</h3>
+            <p>📚Aprimore valores eticos: respeito, disciplina, coperação.</p>
+        </div>
+    </section>
+
+    </div>
+    <div id="grupo02">
+        
+    <section id="depoimentos">
+        <h2>O que nossos alunos dizem</h2>
+        <p>"Meu filho de 12 anos teve uma melhora surpreendente em questao de foca e disciplina depois que começou a pratica basquete na Next dunk Academy"</p>
+        <p>"Recomedei para mãe do colega de sala do meu filho, ela e o filho estão amando o projeto, CONTINUEM!!"</p>
+    </section>
+    <footer>
+        &copy; 2025 escolinha de basquete. Todos os direitos reservados.
+    </footer>
+
+    </div>
+    </div>
+</body>
+
+</html>
