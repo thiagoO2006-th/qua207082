@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -18,28 +18,45 @@
             justify-content: space-between;
             border: 1px solid black;
             align-items: center;
-            background-color: rgb(0, 0, 128,0.4);
+            background-color: rgb(0, 0, 128, 0.4);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         nav a {
-            background-color: rgb(0, 191, 255,0.6   );
-            color: white;
-            padding: 10px 15px;
-            margin: 0px 2px;
+            display: inline-block;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    background: linear-gradient(135deg, #D8BFD8, #E6E6FA    );
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+        nav a:hover {
+            background: linear-gradient(135deg, #ffcc00, #ff6600);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
 
         #principal {
-            background-color:  rgb(255, 102, 0, 0.7);
+            background-color: rgb(255, 102, 0, 0.7);
             text-align: center;
             color: white;
-           
+
         }
-        #principal div{
+
+        #principal div {
             display: inline-block;
             width: 45%;
             vertical-align: top;
         }
-        #principal iframe{
+
+        #principal iframe {
             width: 100%;
             border: 2px solid rgb(255, 255, 255, 0.7);
             border-radius: 10px;
@@ -62,72 +79,134 @@
             padding: 14px 30px;
             margin: 40px auto;
             cursor: pointer;
-            border-radius: 7px;
-            background-color: #000080;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(45deg, #ff6600, #ff0000);
             color: white;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
+        #principal button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         #lista {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            
+
 
         }
 
         #lista .caixa {
-            background-color: rgb(72, 202, 228, 0.7 );
-            width: 200px;
+            background: rgb(65, 105, 225, 0.7);
+            color: #333;
+            width: 220px;
             margin: 20px;
-            padding: 20px;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        #lista .caixa:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         .caixa h3 {
             padding-bottom: 10px;
-        }
-        #depoimentos{
-            background-color: DarkOrange;
-            text-align: center;
-            padding: 20px;
+
         }
 
-        #depoimentos *{
+        #depoimentos {
+               background: linear-gradient(135deg, #ff6600, #ffcc00);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 18px;
+    border-radius: 20px 20px 0 0;
+        }
+        depimentos h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }   
+
+        #depoimentos * {
             padding: 10px;
+            margin: 5px;
         }
-    footer{
-        background-color: black;
-        color: white;
-        text-align: end;
-        
-    }
-    body{
-        max-width: 1000px;
-        margin: auto;
-         font-family: "Times New Roman", Times, serif;
-         border: 2px solid black;
-    }
 
-    #conteiner{
-        display: flex;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: space-between;
+        footer {
+            background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+        }
 
-    }
-    html{
-        background-color: #FDF5E6;
+        body {
+            max-width: 1000px;
+            margin: auto;
+            font-family: 'Poppins', sans-serif;
+            border: 2px solid black;
+        }
 
-    }
-    #principal button:hover{
-        background-color: rgb(0, 0, 128,0.7);
-        box-shadow: 3px 3px 5px black;
-        transform: scale(1.0);
-        transition: all 0.2s ease-in-out;
-    }
+        #conteiner {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        html {
+            background-color: #FDF5E6;
+
+        }
+
+        #principal button:hover {
+            background-color: rgba(83, 83, 222, 0.7);
+            box-shadow: 3px 3px 5px black;
+            transform: scale(1.0);
+            transition: all 0.2s ease-in-out;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        footer:hover {
+    color: white;
+        }
+        h1{
+             font-size: 2.5rem;
+    color: #ff6600;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    
+}
+h2{
+font-size: 1.8rem;
+    color: #333;
+    border-bottom: 4px solid #ff6600;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+h3 {  
+    font-size: 1.3rem;
+    color: #8B0000;
+    font-weight: 600;
+}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
@@ -135,53 +214,61 @@
 <body>
 
     <div id="conteiner">
-    <div id="grupo01">
-    <header>
-        <h1>Next Dunk Academy</h1>
-        <nav>
-            <a href="#"><i class="fa-solid fa-circle-info"></i></a>
-            <a href="#"><i class="fa-solid fa-basketball"></i></a>
-            <a href="#"><i class="fa-brands fa-contao"></i></a>
-        </nav>
-    </header>
-    <section id="principal">
-        <div>
-        <h2>Descubra o seu talento no Basquete</h2>
-        <p>Oferecemos treinos divertidos e educativos para crianças e adolescentes, com foco em desenvolvimento técnico, disciplina e espírito de equipe.</p>
-        <button>matricule-se</button>
-        </div>
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zHCP5wNF-wQ?si=ILE3PKow_6fr4bdm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
-    <section id="lista">
-        <div class="caixa">
-            <h3>🏀 Para todas as idades</h3>
-            <p>Equipes para todas as idades</p>
-        </div>
-        <div class="caixa">
-            <h3>💪 Desenvolvimento</h3>
-            <p>Livros aprimoramentos fisicos e mentas</p>
-        </div>
-        <div class="caixa">
-            <h3>trabbalho emn equipe</h3>
-            <p>📚Aprimore valores eticos: respeito, disciplina, coperação.</p>
-        </div>
-    </section>
+        <div id="grupo01">
+            <header>
+                <h1>Next Dunk Academy</h1>
+                <nav>
+                    <a href="#"><i class="fa-solid fa-circle-info"></i></a>
+                    <a href="#"><i class="fa-solid fa-basketball"></i></a>
+                    <a href="#"><i class="fa-brands fa-contao"></i></a>
+                </nav>
+            </header>
+            <section id="principal">
+                <div>
+                    <h2>Descubra o seu talento no Basquete</h2>
+                    <p>Oferecemos treinos divertidos e educativos para crianças e adolescentes, com foco em
+                        desenvolvimento técnico, disciplina e espírito de equipe.</p>
+                        <a href="https://www.nba.com/">
+                    <button>matricule-se</button>
+                    </a>
+                    </div>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zHCP5wNF-wQ?si=ILE3PKow_6fr4bdm&autoplay=1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="lista">
+                <div class="caixa">
+                    <h3>🏀 Para todas as idades</h3>
+                    <p>Equipes para todas as idades</p>
+                </div>
+                <div class="caixa">
+                    <h3>💪 Desenvolvimento</h3>
+                    <p>Livros aprimoramentos fisicos e mentas</p>
+                </div>
+                <div class="caixa">
+                    <h3>📚trabalho emn equipe</h3>
+                    <p> Aprimore valores eticos: respeito, disciplina, coperação.</p>
+                </div>
+            </section>
 
-    </div>
-    <div id="grupo02">
-        
-    <section id="depoimentos">
-        <h2>O que nossos alunos dizem</h2>
-        <p>"Meu filho de 12 anos teve uma melhora surpreendente em questao de foca e disciplina depois que começou a pratica basquete na Next dunk Academy"</p>
-        <p>"Recomedei para mãe do colega de sala do meu filho, ela e o filho estão amando o projeto, CONTINUEM!!"</p>
-    </section>
-    <footer>
-        &copy; 2025 escolinha de basquete. Todos os direitos reservados.
-    </footer>
+        </div>
+        <div id="grupo02">
 
-    </div>
+            <section id="depoimentos">
+                <h2>O que nossos alunos dizem</h2>
+                <p>"Meu filho de 12 anos teve uma melhora surpreendente em questao de foca e disciplina depois que
+                    começou a pratica basquete na Next dunk Academy"</p>
+                <p>"Recomedei para mãe do colega de sala do meu filho, ela e o filho estão amando o projeto,
+                    CONTINUEM!!"</p>
+            </section>
+            <footer>
+                &copy; 2025 escolinha de basquete. Todos os direitos reservados.
+            </footer>
+
+        </div>
     </div>
 </body>
 
