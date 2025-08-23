@@ -27,27 +27,29 @@
 
         nav a {
             display: inline-block;
-    padding: 10px 18px;
-    margin: 0 5px;
-    border-radius: 25px;
-    font-weight: 500;
-    font-size: 15px;
-    color: white;
-    background: linear-gradient(135deg, #D8BFD8, #E6E6FA    );
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            padding: 10px 18px;
+            margin: 0 5px;
+            border-radius: 25px;
+            font-weight: 500;
+            font-size: 15px;
+            color: white;
+            background: linear-gradient(135deg, #D8BFD8, #E6E6FA);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         }
+
         nav a:hover {
             background: linear-gradient(135deg, #ffcc00, #ff6600);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         #principal {
             background-color: rgb(255, 102, 0, 0.7);
             text-align: center;
             color: white;
-
+            display: flex;
+            justify-content: space-around;
         }
 
         #principal div {
@@ -58,9 +60,11 @@
 
         #principal iframe {
             width: 100%;
-            border: 2px solid rgb(255, 255, 255, 0.7);
-            border-radius: 10px;
-            margin: 30px 0px;
+            margin: 30px auto;
+            padding-left: 10px;
+            padding: 10px;
+            border-radius: 20px 20px;
+            box-shadow: 0 4px 10px rgba(209, 43, 43, 1);
         }
 
         #principal h2 {
@@ -86,10 +90,11 @@
             font-size: 16px;
             font-weight: bold;
             transition: transform 0.2s, box-shadow 0.2s;
+            animation: pulse 2.5s infinite;
         }
 
         #principal button:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
@@ -111,6 +116,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
+
         #lista .caixa:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -122,17 +128,18 @@
         }
 
         #depoimentos {
-               background: linear-gradient(135deg, #ff6600, #ffcc00);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    font-size: 18px;
-    border-radius: 20px 20px 0 0;
+            background: linear-gradient(135deg, #ff6600, #ffcc00);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 18px;
+            border-radius: 20px 20px 0 0;
         }
+
         depimentos h2 {
             font-size: 26px;
             margin-bottom: 20px;
-        }   
+        }
 
         #depoimentos * {
             padding: 10px;
@@ -141,10 +148,10 @@
 
         footer {
             background: #111;
-    color: #ccc;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
+            color: #ccc;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
         }
 
         body {
@@ -185,28 +192,52 @@
             font-size: 28px;
             font-weight: bold;
         }
+
         footer:hover {
-    color: white;
+            color: white;
         }
-        h1{
-             font-size: 2.5rem;
-    color: #ff6600;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    
-}
-h2{
-font-size: 1.8rem;
-    color: #333;
-    border-bottom: 4px solid #ff6600;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
-h3 {  
-    font-size: 1.3rem;
-    color: #8B0000;
-    font-weight: 600;
-}
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6600;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #333;
+            border-bottom: 4px solid #ff6600;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #8B0000;
+            font-weight: 600;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 rgba(255, 102, 0, 0.7);
+            }
+
+            50% {
+                transform: scale(1.08);
+                box-shadow: 0 0 20px rgba(255, 102, 0, 0.8);
+            }
+
+            100% {
+                transform: scale(1.5);
+                box-shadow: 0 0 0 rgba(255, 102, 0, 0.7);
+            }
+        }
+        #video{
+             /* border: 2px solid rgb(255, 255, 255, 0.7); */
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
@@ -228,15 +259,13 @@ h3 {
                     <h2>Descubra o seu talento no Basquete</h2>
                     <p>Oferecemos treinos divertidos e educativos para crianças e adolescentes, com foco em
                         desenvolvimento técnico, disciplina e espírito de equipe.</p>
-                        <a href="https://www.nba.com/">
-                    <button>matricule-se</button>
+                    <a href="https://www.nba.com/">
+                        <button>matricule-se</button>
                     </a>
-                    </div>
-                <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zHCP5wNF-wQ?si=ILE3PKow_6fr4bdm&autoplay=1"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div id="video">
+                    <iframe width="420" height="345" style="margin: auto";
+                        src="https://www.youtube.com/embed/zHCP5wNF-wQ?autoplay=1&mute=1"></iframe>
                 </div>
             </section>
             <section id="lista">
@@ -249,7 +278,7 @@ h3 {
                     <p>Livros aprimoramentos fisicos e mentas</p>
                 </div>
                 <div class="caixa">
-                    <h3>📚trabalho emn equipe</h3>
+                    <h3>📚trabalho em equipe</h3>
                     <p> Aprimore valores eticos: respeito, disciplina, coperação.</p>
                 </div>
             </section>
