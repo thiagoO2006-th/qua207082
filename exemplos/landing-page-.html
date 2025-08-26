@@ -33,7 +33,7 @@
             font-weight: 500;
             font-size: 15px;
             color: white;
-            background: linear-gradient(135deg, #D8BFD8, #E6E6FA);
+            background: linear-gradient(135deg, #D8BFD8, #4a4ae4);
             transition: all 0.3s ease-in-out;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         }
@@ -60,11 +60,15 @@
 
         #principal iframe {
             width: 100%;
-            margin: 30px auto;
-            padding-left: 10px;
-            padding: 10px;
-            border-radius: 20px 20px;
-            box-shadow: 0 4px 10px rgba(209, 43, 43, 1);
+            height: 315px;
+            margin: 20px auto;
+            border-radius: 15px;
+            border: 5px solid #ff6600;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4),
+                0 0 15px rgba(255, 102, 0, 0.6);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 3px solid transparent;
+            border-image: linear-gradient(50deg, #ff6600, #ffcc00) 1;
         }
 
         #principal h2 {
@@ -235,8 +239,11 @@
                 box-shadow: 0 0 0 rgba(255, 102, 0, 0.7);
             }
         }
-        #video{
-             /* border: 2px solid rgb(255, 255, 255, 0.7); */
+
+        #principal iframe:hover {
+            transform: scale(1.05) rotate(-0.4deg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6),
+                0 0 25px rgba(255, 102, 0, 0.8);
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
@@ -264,7 +271,7 @@
                     </a>
                 </div>
                 <div id="video">
-                    <iframe width="420" height="345" style="margin: auto";
+                    <iframe width="420" height="345" style="margin: auto" ;
                         src="https://www.youtube.com/embed/zHCP5wNF-wQ?autoplay=1&mute=1"></iframe>
                 </div>
             </section>
@@ -279,7 +286,7 @@
                 </div>
                 <div class="caixa">
                     <h3>📚trabalho em equipe</h3>
-                    <p> Aprimore valores eticos: respeito, disciplina, coperação.</p>
+                    <p> Aprimore valores éticos: respeito, disciplina, cooperação.</p>
                 </div>
             </section>
 
@@ -288,7 +295,7 @@
 
             <section id="depoimentos">
                 <h2>O que nossos alunos dizem</h2>
-                <p>"Meu filho de 12 anos teve uma melhora surpreendente em questao de foca e disciplina depois que
+                <p>"Meu filho de 12 anos teve uma melhora surpreendente em questao do foco e disciplina depois que
                     começou a pratica basquete na Next dunk Academy"</p>
                 <p>"Recomedei para mãe do colega de sala do meu filho, ela e o filho estão amando o projeto,
                     CONTINUEM!!"</p>
