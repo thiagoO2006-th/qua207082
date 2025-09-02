@@ -12,4 +12,4 @@ frm.addEventListener("submit", (e) =>{
     resp.innerText = `Valor a pagar R$: ${valor.toFixed(2)}` // exibe resposta 
 
    
-});
+})
