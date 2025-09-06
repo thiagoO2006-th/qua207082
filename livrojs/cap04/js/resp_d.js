@@ -15,7 +15,7 @@ frm.addEventListener("submit", (e) => {
         return
     }
     if (a == b && a == c){
-        resp1 = `triângulo equilátero`
+        resp1.innerText = `triângulo equilátero`
     } else if ( a != b && a != c && b != c){
         resp1.innerText = `triângulo escaleno`
     } else {
