@@ -1,0 +1,22 @@
+<script>
+    alert("Digite 0 para sair")
+    do {
+        const num = Number(prompt("Número"))
+        if (num == 0 || isNaN(num)) {
+            const sair = confirm("Confirmar saída?")
+      
+        if (sair) {
+            break // sai da repetição
+            // vain para linha 21
+        } else {
+            continue // volta ao inicio do laço 
+        }
+    }
+        if(num % 2 == 0){
+            alert(`O dobro de ${num} é ${num * 2}`)
+        } else {
+            alert(` o triplo de ${num} é ${num * 3}`)
+        }
+    } while (true) // enqunto verdadeiro (só sai do laço pelo break)
+    alert("bye, bye...")
+</script>
