@@ -25,3 +25,7 @@ if(soma == num){
 
 
 })
+
+const resp = document.querySelector("h3")
+
+
