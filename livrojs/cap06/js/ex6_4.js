@@ -4,7 +4,7 @@ const criancas = []
 
 criancas.push({ nome: "Lucas", idade: 4 })
 criancas.push({ nome: "Ana", idade: 3 })
-criancas.push({ nome: "Bianca", idade: 6     })
+criancas.push({ nome: "Bianca", idade: 6 })
 criancas.push({ nome: "Pedro", idade: 6 })
 criancas.push({ nome: "Joao", idade: 4 })
 criancas.push({ nome: "Maria", idade: 4 })
@@ -63,9 +63,8 @@ frm.btResumir.addEventListener("click", () => {
             nomes.push(nome)
         } else {
             // senão montar resumo para cada idade
-            resumo += `${aux} ano(s) : ${nomes.length} criança(s) - `
-            resumo += ((nomes.length / copia.length) * 100).toFixed(2) + "%\n"
-            resumo += `(${nomes.join(",")})\n\n`
+               resumo = atualizarResumo(resumo,aux,nomes, copia)
+
             // atualizar a idade aux
             aux = idade
             // limpa o vetor nome
@@ -74,8 +73,13 @@ frm.btResumir.addEventListener("click", () => {
             nomes.push(nome)
         }
     }
-    resumo += `${aux} ano(s) : ${nomes.length} criança(s) - `
-    resumo += ((nomes.length / copia.length) * 100).toFixed(2) + "%\n"
-    resumo += `(${nomes.join(",")})\n\n`
+    resumo = atualizarResumo(resumo,aux,nomes, copia)
     resp.innerText = resumo
 })
+
+function atualizarResumo(resumo, aux, nomes, copia) {
+    resumo += `${aux} ano(s) : ${nomes.length} criança(s) - `
+    resumo += ((nomes.length / copia.length) * 100).toFixed(2) + "%\n"
+    resumo += `(${nomes.join(",")})\n\n` 
+    return resumo 
+}
