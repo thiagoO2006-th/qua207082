@@ -14,7 +14,7 @@ frm.addEventListener("submit", (e) => {
         lista += `${i + 1}.${pacientes[i]}\n`
     }
     respLista.innerText = lista // exibe a lista de pacientes na página
-    frm.inPaciente.valeu = "" // linha conteúdo do campo do form
+    frm.inPaciente.value = "" // linha conteúdo do campo do form
     frm.inPaciente.focus() // posiciona o curso no campo
 })
 
