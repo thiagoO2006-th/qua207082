@@ -1,0 +1,14 @@
+<script>
+    // lê a palavra 
+    const palavra = prompt("palavra: ")
+    // obtém o tamanho
+    const tam = palavra.length
+    // inverso inicia com a última letra em caixa alta
+    let inverso = palavra.charAt(tam-1).toUpperCase()
+    // for descrecente percorre as demais letras
+    for(let i = tam-2; i>= 0; i--){
+        inverso += palavra.charAt(i).toLowerCase()
+    }
+    // exibe palavras original e invertida
+    alert(`Palavra: ${palavra}\nInvertida: ${inverso}`)
+</script>
