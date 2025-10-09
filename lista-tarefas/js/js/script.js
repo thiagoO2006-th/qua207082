@@ -1,7 +1,8 @@
 const frm = document.querySelector("form")
 const tbody = document.querySelector("tbody")
 let lsItem = []
-
+filtro = localStorage.getItem("filtro")
+filtro = filtro ==  null ? "" : filtro
 
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -21,15 +22,15 @@ function prepararEdicao(index) {
 
 frm.btApagar.addEventListener("click", () => {
     const index = frm.inIndex.value
-    if(index == ""){
+    if (index == "") {
         alert("Necessário selecionar 1 item.")
         return
     }
 
-    if(confirm("Deseja realmente apagar esse item") == false){
+    if (confirm("Deseja realmente apagar esse item") == false) {
         return
     }
-    lsItem.splice(index,1)
+    lsItem.splice(index, 1)
     atualizarTabela()
 })
 
@@ -39,25 +40,44 @@ function atualizarTabela() {
     tbody.innerHTML = ""
     let cont = 0
     for (i of lsItem) {
+        if(filtro == "" || filtro.includes(i.status)){
         tbody.innerHTML +=
             `<tr onclick="prepararEdicao(${cont})">
         <td>${i.item}</td>
         <td>${i.status}</td>
         </tr>`
-        cont++
         }
+        cont++
     }
+}
 
 
-function limpar(){
+function limpar() {
     frm.inItem.value = ""
     frm.inStatus.value = ""
     frm.inIndex.value = ""
-        frm.btApagar.disabled = true
+    frm.btApagar.disabled = true
 
 }
 
-if(localStorage.getItem("lsItem") != null){
+if (localStorage.getItem("lsItem") != null) {
+
     lsItem = JSON.parse(localStorage.getItem("lsItem"))
     atualizarTabela()
+}
+const lsFiltro = frm.querySelectorAll("input[type= 'checkbox']")
+for (const bt of lsFiltro) {
+    bt.addEventListener("click", filtrar)
+    if(filtro.includes(bt.value)){
+        bt.checked = true
+    }
+}
+function filtrar() {
+    filtro = ""
+    for (const bt of lsFiltro) {
+        filtro += bt.checked ? bt.value + "," : ""
+    }
+    atualizarTabela()
+        localStorage.setItem("filtro", filtro)
+
 }
