@@ -34,9 +34,9 @@ frm.btApagar.addEventListener("click", () => {
     atualizarTabela()
 })
 const cores = {
-    "Em Fila" : "bg-secudary-subtle",
-    "Iniciado": "bg-primary-subtle",
-    "Concluído": "bg-danger-subtle"
+    "em Fila":"bg-secondary-subtle",
+    "Iniciado":"bg-primary-subtle",
+    "Concluido":"bg-danger-subtle"
 }
 
 function atualizarTabela() {
@@ -49,9 +49,8 @@ function atualizarTabela() {
         tbody.innerHTML +=
             `<tr onclick="prepararEdicao(${cont})">
         <td>${i.item}</td>
-        <td class="${cores[i.status]}">${i.status}</td>
-        </tr>`
-        }
+        <td class="${cores[i.status]}">${i.status}</td></tr>`
+        } 
         cont++
     }
 }
