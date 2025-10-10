@@ -33,6 +33,11 @@ frm.btApagar.addEventListener("click", () => {
     lsItem.splice(index, 1)
     atualizarTabela()
 })
+const cores = {
+    "Em Fila" : "bg-secudary-subtle",
+    "Iniciado": "bg-primary-subtle",
+    "Concluído": "bg-danger-subtle"
+}
 
 function atualizarTabela() {
     limpar()
@@ -44,7 +49,7 @@ function atualizarTabela() {
         tbody.innerHTML +=
             `<tr onclick="prepararEdicao(${cont})">
         <td>${i.item}</td>
-        <td>${i.status}</td>
+        <td class="${cores[i.status]}">${i.status}</td>
         </tr>`
         }
         cont++
