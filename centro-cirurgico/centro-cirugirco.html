@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="margin: 25px;">
+    <div class="container">
+        <h1>Gerenciar Painel dos paciente no Centro de cirurgico</h1>
+        <hr>
+        <form>
+            <div class="row g-3">
+                <div class="col-lg-6">
+                    <label for="inItem" class="form-label">Nome paciente:</label>
+                    <input type="text" id="inItem" class="form-control" required>
+                </div>
+                <!-- stutus -->
+                <div class="col-lg-3">
+                    <label for="inStatus" class="form-label">Status:</label>
+                    <select name="status" id="inStatus" class="form-select" required>
+                        <option value="">Pré-operatorio</option>
+                        <option>Transferido</option>
+                        <option>Em recuperação</option>
+                        <option>Sala de cirurgia</option>
+                    </select>
+                </div>
+
+                <!-- local -->
+                <div class="col-lg-3">
+                    <label for="inLocal" class="form-label">Local:</label>
+                    <input type="text" id="inLocal" class="form-control" required>
+                </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label for="inPrevisto" class="form-label">Inicio Previsto:</label>
+                        <input type="time" id="inPrevisto" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="inCirurgia" class="form-label">Inicio cirurgia:</label>
+                        <input type="time" id="inCirurgia" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="inFim" class="form-label">fim da cirurgia:</label>
+                        <input type="time" id="inFim" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="inSaida" class="form-label">Saída Previsto:</label>
+                        <input type="time" id="inSaida" class="form-control" required>
+                    </div>
+
+                    <div class="float-end mb-3">
+                        <input type="submit" class=" mt-3 btn btn-secondary" value="Novo" id="btNovo">
+                        <input type="submit" onclick="limpar()" class=" mt-3 btn btn-primary" value="Gravar"
+                            id="btGravar">
+                        <input type="button" class=" mt-3 btn btn-danger" value="Apagar" id="btApagar">
+                    </div>
+                    <hr>
+                </div>
+        </form>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class="col-lg-4">Nome do paciente</th>
+                    <th class="col-lg-4">Status</th>
+                    <th class="col-lg-1">Inicio Previsto</th>
+                    <th class="col-lg-1">Inicio da Cirurgia</th>
+                    <th class="col-lg-1">Fim da Cirurgia</th>
+                    <th class="col-lg-1">Saída Prevista</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="js/script.js"></script>
+</body>
+
+</html>
