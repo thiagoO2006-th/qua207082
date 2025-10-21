@@ -1,82 +1,103 @@
 const frm = document.querySelector("form")
-const divEl = document.querySelector("div")
+const tbody = document.querySelector("tbody")
+let lsItem = []
 
+frm.addEventListener("submit", (e) => {
+    e.preventDefault()
 
-document.addEventListener("DOMContentLoaded", () => {
-    const paciente = []
-    const nomeInput = document.getElementById("nomePaciente")
-    const statusInput = document.getElementById("stutus")
-    const inicioPrevistoInput = document.getElementById("inicioPrevisto")
-    const inicioCirurgiaInput = document.getElementById("inicioCirurgia")
-    const fimCirurgiaInput = document.getElementById("fimCirurgia")
-    const saidaPrevistaInput = document.getElementById("saidaPrevista")
-    const tabela = document.getElementById("TavelaPaciente")
+    const item = frm.inPaciente.value
+    const status = frm.inStatus.value   
 
-    const btnNovo = document.getElementById("btnNovo")
-    const btnGravar =  document.getElementById("btnGravar")
-    const btnApagar = document.getElementById("btnApagar")
+    const local = frm.inLocal.value   
+    const inprevisto = frm.inInicioPrevisto.value   
+    const incirurgia = frm.inInicioCirurgia.value   
+    const fimcirurgia = frm.inFimCirurgia.value   
+    const saidaprev = frm.inSaidaPrevisto.value   
 
-    let indiceSelecionado = -1
+    const index = frm.inIndex.value   
 
-    // === Novo: limpar os campos ===
-    btnNovo.addEventListener("click", ()=>{
-        nomeInput.value = ""
-        statusInput.value = "Pré-Operatório"
-        inicioPrevistoInput.value = ""
-        inicioCirurgiaInput.value = ""
-        fimCirurgiaInput.value = ""
-        saidaPrevistaInput.value = ""
-        indiceSelecionado = -1
-    })
-
-    // ===GRAVAR: adiciona ou edita ===
-    const novoPaciente = {
-        nome: nomeInput.value,
-        status: statusInput.value,
-        inicioPrevisto: inicioCirurgiaInput.value,
-        inicioCirurcia: inicioCirurgiaInput.value,
-        fimCirurgia: fimCirurgiaInput.value,
-        saidaPrevista: saidaPrevistaInput.value
-    }
-
-    if(!paciente.nome){
-        alert("Digite o nome do paciente!")
-        return
-    }
-    if(indiceSelecionado === -1){
-        paciente.push(paciente)
-    } else{
-        paciente[indiceSelecionado] = paciente
-    }
-
-    atualizarTabela()
-    btn.click
+    index == "" ? lsItem.push({item,status,local,inprevisto,incirurgia,fimcirurgia,saidaprev}) : lsItem[index] = {item,status,local,inprevisto,incirurgia,fimcirurgia,saidaprev}
+   
+    atualizarTabela()    
 })
 
-// === APAGAR: exclui paciente ===
+function prepararEdicao(index){
+    frm.inPaciente.value = lsItem[index].item
+    frm.inStatus.value = lsItem[index].status
 
-btn.btnApagar.addEventListener("click", ()=>{
-    if(indiceSelecionado === -1){
-        alert("Selecione um paciente na tabela para excluir!")
+    frm.inLocal.value = lsItem[index].local
+    frm.inInicioPrevisto.value = lsItem[index].inprevisto   
+    frm.inInicioCirurgia.value = lsItem[index].incirurgia   
+    frm.inFimCirurgia.value = lsItem[index].fimcirurgia   
+    frm.inSaidaPrevisto.value = lsItem[index].saidaprev   
+
+    frm.inIndex.value = index
+    frm.btApagar.disabled = false
+}
+
+frm.btApagar.addEventListener("click", () =>{
+    const index = frm.inIndex.value
+
+    if(index == ""){
+        alert("Necessário selecionar 1 item.")
         return
     }
-    paciente.splice(indiceSelecionado, 1)
-    atualizarTabela()
-    btnNovo.click()
+
+    if(confirm("Deseja realmente apagar esse item?") == false){
+        return
+    }
+
+    lsItem.splice(index,1)
+    atualizarTabela()        
 })
 
-// === Atualizar tabela ===
-function atualizarTabela(){
-    tabela.innerHTML = ""
-    pacientes.forEach((p, index)=>{
-        const tr = document.createElement("tr")
-        tr.innerHTML = '
-        <td>${p.nome}</td>
-        
-        
-        
-        
-        
-        '
-    })
+const coresStatus = {
+  "Pré-Operatório": "#fbd972",
+  "Em recuperação": "#89e89f",
+  "Transferido": "#b8daff"
+};
+
+function atualizarTabela() {
+    limpar()
+    localStorage.setItem("lsItem", JSON.stringify(lsItem))
+    
+        tbody.innerHTML = ""
+
+        let cont = 0
+
+    for (i of lsItem) {
+
+        const cor = coresStatus[i.status];
+
+        tbody.innerHTML += `<tr onclick="prepararEdicao(${cont})">
+        <td>${i.item}</td>
+          <td style="background-color:${cor}">
+            ${i.status} (${i.local})
+          </td>
+          <td>${i.inprevisto}</td>
+          <td>${i.incirurgia}</td>
+          <td>${i.fimcirurgia}</td>
+          <td>${i.saidaprev}</td>       
+        </tr>`
+
+        cont++
+    }
+}
+
+function limpar(){
+    frm.inPaciente.value = ""  
+    frm.inStatus.value = ""
+    frm.inLocal.value = ""
+    frm.inInicioPrevisto.value = "" 
+    frm.inInicioCirurgia.value = ""
+    frm.inFimCirurgia.value = ""  
+    frm.inSaidaPrevisto.value = ""
+    frm.inIndex.value = ""
+    frm.inPaciente.focus()
+    frm.btApagar.disabled = true
+}
+
+if(localStorage.getItem("lsItem") != null){
+    lsItem = JSON.parse(localStorage.getItem("lsItem"))
+    atualizarTabela()
 }
