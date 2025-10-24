@@ -79,30 +79,72 @@ p {
     padding: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+    transition: box-shadow 0.5s;
+    position: relative;
 }
 
+.produto > div > img {
+    display: none;
+}
 
+.marcado > div > img {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 128px;
+    height: 128px;
+    filter: invert(1);
+    display: block;
+}
 
+.produto:hover {
+    box-shadow: -2px -2px 7px 4px #4B0082;
+}
 
-.produto img{
+.marcado {
+    background-color: #3b0a0a ;
+}
+
+.marcado p {
+    color: white;
+}
+
+.marcado > img {
+    opacity: 0.7;
+}
+
+.produto > img {
     width: 210px;
     height: 210px;
     margin-bottom: 10px;
+
 }
 
-.nome{
-   font-family: "Trocchi", serif;
+.nome {
+    font-family: "Trocchi", serif;
 }
 
-.descricao, .valor{
+.descricao,
+.valor {
     font-family: "Quattrocento", serif;
 }
 
-.descricao{
+.descricao {
     font-size: small;
 }
 
-.valor{
+.valor {
     margin-top: 20px;
     font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 6px;
+    background-color: #722F37;
+
+}
+
+footer p {
+    color: #fff;
 }
