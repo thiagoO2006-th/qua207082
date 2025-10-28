@@ -6,7 +6,6 @@ produtos.innerHTML = ""
 for (const p of lsProduto) {
     const clone = original.cloneNode(true)
     clone.querySelector(".nome").innerText = p.nome
-    clone.querySelector(".descricao").innerText = p.descricao
     clone.querySelector("img").src = p.img
     clone.querySelector(".valor").innerText = `R$ ${p.valor.toFixed(2).toString().replace(".", ",")}`
     produtos.appendChild(clone)
@@ -33,7 +32,7 @@ function atualizarQt() {
    
 }
 
-document.querySelector("#btVela").addEventListener("click", carrinho)
+document.querySelector("#btTenis").addEventListener("click", carrinho)
 
 function carrinho() {
     const qtText = document.querySelector("#qt").innerText
@@ -103,4 +102,3 @@ frm.addEventListener("submit", (e) =>{
     
     }
     })
-
