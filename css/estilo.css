@@ -1,0 +1,136 @@
+:root {
+    /* Paleta de Cores: Mais clara, Foco em Neon e Dinamismo */
+    --cor-fundo-claro: #F0F4F8; /* Cinza claro e suave (menos denso que o branco) */
+    --cor-fundo-principal: #2C3E50; /* Azul escuro semi-claro - base principal */
+    --cor-texto-escuro: #1A1A2E; /* Texto principal escuro */
+    --cor-texto-secundario: #5A6A80; /* Cinza azulado para detalhes */
+    --cor-neon-primaria: #00D1FF; /* Azul Ciano Brilhante (inovação e destaque) */
+    --cor-neon-secundaria: #FF4D94; /* Rosa Choque (energia e ação) */
+    --sombra-caixa: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Animação de Pulsar (Para o efeito de hover do botão) */
+@keyframes neon-pulse {
+    0% {
+        box-shadow: 0 0 5px var(--cor-neon-secundaria);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--cor-neon-secundaria), 0 0 30px var(--cor-neon-secundaria);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--cor-neon-secundaria);
+    }
+}
+
+body {
+    background-color: var(--cor-fundo-claro); /* Fundo mais claro */
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* Fonte moderna e legível */
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.2em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 5px;
+    margin-bottom: 30px;
+    color: var(--cor-neon-secundaria); /* Título em destaque forte */
+    background-color: var(--cor-fundo-principal); /* Fundo escuro para contraste no topo */
+    border-bottom: 3px solid var(--cor-neon-primaria);
+    box-shadow: var(--sombra-caixa);
+    font-weight: 700;
+}
+
+#exemplo {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FFFFFF; /* Caixa principal bem clara */
+    border-radius: 16px;
+    box-shadow: var(--sombra-caixa);
+    border: 1px solid var(--cor-fundo-principal);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--cor-fundo-principal); /* Título em cor escura principal */
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cor-texto-secundario);
+    padding-bottom: 10px;
+    font-weight: 800;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1.05em;
+    color: var(--cor-texto-secundario);
+}
+
+p b {
+    color: var(--cor-neon-secundaria);
+    font-weight: 700;
+}
+
+/* Estilo para links dentro da div #exemplo (Botões "Ações/Módulos") */
+#exemplo a {
+    display: block;
+    margin: 15px 0;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: var(--cor-texto-escuro); /* Texto escuro no botão claro/gradiente */
+    
+    /* Gradiente vibrante para o botão */
+    background: linear-gradient(90deg, #FFFFFF, var(--cor-neon-primaria));
+    border: 2px solid var(--cor-neon-primaria);
+    
+    /* Efeito sutil de profundidade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#exemplo a:hover {
+    /* Animação: Mudar cor do texto, elevar, e aplicar o EFEITO PULSAR NEON */
+    color: #FFFFFF; /* Texto branco para destaque no hover */
+    transform: scale(1.02); /* Escala sutil para indicar interação */
+    background: linear-gradient(90deg, var(--cor-neon-secundaria), var(--cor-neon-primaria)); /* Gradiente mais forte */
+    
+    /* Animação de Pulsar */
+    animation: neon-pulse 1s infinite alternate; /* Aplica a animação */
+    border: 2px solid var(--cor-neon-secundaria);
+}
+
+/* Media Query para Mobile-First (Design Responsivo) */
+@media (max-width: 600px) {
+    /* Mantenho as configurações de responsividade */
+    body {
+        padding: 10px;
+    }
+
+    #exemplo {
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    #exemplo a {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}
